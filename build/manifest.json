@@ -1,0 +1,17 @@
+{
+  "name": "WebTrails by Avast Labs - Browser History Viewer",
+  "description": "Get insights about yourself through your browsing history. Avast History Viewer is 100% private. No data leaves your browser. No data is created or stored. Avast History Viewer gives you a graphical view of the browsing history stored in your Chrome browser.",
+  "manifest_version": 2,
+  "offline_enabled": true,
+  "version": "0.5",
+  "permissions": [
+    "history"
+  ],
+  "icons": { "128": "icon.png" },
+  "browser_action": {
+      "default_name": "WebTrails",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "content_security_policy": "default-src 'self' 'unsafe-eval'; img-src * 'self' data: https:; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.opencagedata.com/"
+}

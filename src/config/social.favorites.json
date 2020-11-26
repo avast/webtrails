@@ -1,0 +1,103 @@
+{
+	"facebook.com" : [
+		{
+			"name" : "Top events",
+			"exclude" : {
+				1 : ["email" ,"join_near_by"]
+			},
+			"meta" : ["title", "views"],
+			"match" : [0, "events"],
+			"group" : 1,
+			"title" : "title",
+			"titleIgnore" : ["Facebook"],
+			"titleRegex" : "(?:\(\d.*\) )?(.*)"
+		},
+		{
+			"name" : "Top views",
+			"meta" : ["title", "views"],
+			"exclude" : {
+				0 : ["photo.php", "l.php", "home.php", "notifications.php", "story.php",
+					"login", "events", "groups", "messages", "pages", "docs", "developer",
+					"settings", "photo", "n", "watch", "pg", "marketplace", "permalink.php",
+					"support", "sharer", "all4", "donate", "help", "stories", "friends",
+					"messenger", "public", "policies"],
+				1: ["dialog"]
+			},
+			"group" : 0,
+			"title" : 0
+		},
+		{
+			"name" : "Top views",
+			"meta" : ["title", "views"],
+			"match" : [0, "pages"],
+			"group" : 1,
+			"title" : 1
+		},
+		{
+			"name" : "Top views",
+			"meta" : ["title", "views"],
+			"match" : [0, "pg"],
+			"group" : 1,
+			"title" : 1
+		}
+	],
+	"twitter.com" : [
+		{
+			"name" : "Favorite posters",
+			"meta" : ["title", "views"],
+			"exclude" : {
+				0 : ["home", "compose", "hashtag", "search", "i", "settings"]
+			},
+			"group" : 0,
+			"title" : 0
+		}
+	],
+	"medium.com" : [
+		{
+			"name" : "Top authors",
+			"meta" : ["title", "reads"],
+			"exclude" : {
+				0 : ["feed", "m"]
+			},
+			"group" : 0,
+			"title" : 0
+		}
+	],
+	"instagram.com" : [
+		{
+			"name" : "Top pages",
+			"meta" : ["title", "views"],
+			"exclude" : {
+				0 : ["p"],
+				"hostname" : "help.instagram.com"
+			},
+			"group" : 0,
+			"title" : "title",
+			"titleReplace" : " • Instagram photos and videos"
+		}
+	],
+	"linkedin.com" : [
+		{
+			"name" : "Top profile visits",
+			"meta" : ["title", "views"],
+			"match" : [0, "in"],
+			"group" : 1,
+			"title" : "title",
+			"titleReplace" :  " | LinkedIn",
+			"titleIgnore" : ["", "LinkedIn", "undefined"],
+			"titleRegex" : "(?:\(\d.*\) )?(.*)"
+		}
+	],
+	"reddit.com" : [
+		{
+			"name" : "Favorite groups",
+			"meta" : ["title", "views"],
+			"exclude" : {
+				0 : ["help"]
+			},
+			"match" : [0, "r"],
+			"group" : 1,
+			"title" : 1,
+		}
+	]
+}

@@ -1,0 +1,51 @@
+{
+  "facebook.com" : {
+    "match" : {
+      "$.path.0" : ["photo.php", "home.php", "notifications.php"]
+    },
+    "account" : [
+      "$..params.n_m[0]",
+      "$..params.cp[0]"
+    ]
+  },
+  "twitter.com" : {
+    "match" : {
+      "$.path.0" : ["settings", "home"]
+    },
+    "account" : [
+      "$..[?(@.pathname == '/settings/profile')].title"
+    ],
+    "accountCleaner" : [" / Twitter"]
+  },
+  "medium.com" : {
+    "match" : {
+      "$.path.0" : ["feed", "m"]
+    }
+  },
+  "google.com" : {
+    "match" : {
+      "$.hostname" : ["myaccount.google.com", "accounts.google.com"]
+    },
+    "account" : [
+      "$..params.user_id[0]"
+    ]
+  },
+  "reddit.com" : {
+    "match" : {
+      "$.path.0" : ["user"]
+    },
+    "account": [
+      "$..[?(@[0] == 'user')].[1]"
+    ]
+  },
+  "linkedin.com" : {
+    "match" : {
+      "$.path.0" : ["notifications", "messaging", "me", "psettings"]
+    }
+  },
+  "slack.com" : {
+    "match" : {
+      "$.path.0": ["admin", "messages", "ssb"]
+    }
+  }
+}

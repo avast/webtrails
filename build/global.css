@@ -1,0 +1,137 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+:root {
+	--background: #FFF;
+	--color: #333;
+	--background-lighter:  #EFF3FB;
+	--background-light: #C9DAFC;
+	--background-shade : #B8CEF1;
+	--highlight-1-1 : #3BCDE4;
+	--highlight-1-2 : #29B4DB;
+	--highlight-2-2 : #2861D5;
+	--highlight-2-1 : #3177E6;
+	--tone-1 :  #2861D5;
+	--tone-2 : rgba(255,0,0,.6);
+	--tone-3 : rgb(2, 42, 125);
+	--tone-4: rgb(252 198 17);
+}
+/*
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --border-color:  #CBCBCB;
+    --background: #18181B;
+    --color: #CBCBCB;
+    --background-lighter: #1E1F21;
+  }
+}
+*/
+body {
+	color: var(--color);
+	background:  var(--background);
+	background-attachment: fixed;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2, h3 {
+	color: var(--highlight-2-1);
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+button {
+	border: 0;
+	font-size: inherit;
+	font-family: inherit;
+	outline: none;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+input[type="range"] {
+	height: 0;
+}
+
+.button {
+	color: var(--background);
+	background-color: var(--highlight-2-2);
+	border-radius: 1rem;
+	outline: none;
+	border: none;
+	padding: .3rem 1rem;
+}
+
+.button:disabled {
+	color: #999;
+}
+
+.button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+.button:focus {
+	border-color: #666;
+}
+
+.panel-overview {
+	display: flex;
+}
+.panel-highlights {
+	flex-grow: 2;
+	margin-right: 2rem;
+}
+.panel-topratios {
+	width: 30%;
+	min-width: 250px;
+	min-height: 250px;
+}
+
+
+.table {
+	width: 100%;
+}
+.table td {
+	padding: .2rem;
+	margin: .1rem;
+	color: var(--color);
+	border-bottom: 1px solid var(--color);
+}
