@@ -4,7 +4,7 @@ let localStorageReverse = localStorage.getItem(STORAGE_REVERSE) || '{}';
 
 let CACHE_REVERSE = JSON.parse(localStorageReverse);
 
-const apikey = '5431004af13447f699b7e605799933f8';
+const apikey = 'YOUR_OPENCAGE_API_KEY';
 
 const api_url = 'https://api.opencagedata.com/geocode/v1/json'
 
