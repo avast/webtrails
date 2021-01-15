@@ -2,14 +2,12 @@ import svelte from 'rollup-plugin-svelte';
 import resolve from 'rollup-plugin-node-resolve';
 import json from '@rollup/plugin-json';
 import commonjs from 'rollup-plugin-commonjs';
-//import livereload from 'rollup-plugin-livereload';
 import builtins from 'rollup-plugin-node-builtins';
 import { terser } from 'rollup-plugin-terser';
-//import { markdown } from 'svelte-preprocess-markdown';
 
 const production = !process.env.ROLLUP_WATCH;
 
-export default [{
+export default [
 
 
         // workers
@@ -18,7 +16,7 @@ export default [{
             output: [{
                 format: 'iife',
                 name: 'trends.worker.js',
-                dir: 'public/workers',
+                dir: 'build/workers',
                 sourcemap: true
             }],
             plugins: [
@@ -30,7 +28,6 @@ export default [{
                 resolve({
                     mainFields: ['module', 'main'],
                     preferBuiltins: true,
-                    //main: true,
                     browser: true
                 }),
                 commonjs({
@@ -71,7 +68,7 @@ export default [{
                     // we'll extract any component CSS out into
                     // a separate file  better for performance
                     css: css => {
-                        css.write('bui/index.css');
+                        css.write('index.css');
                     },
                     // add markdown
                     //preprocess: markdown({
